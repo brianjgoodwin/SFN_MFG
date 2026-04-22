@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact &mdash; Tugboat Manufacturing</title>
+  <title>Contact &mdash; SFN_MFG</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -11,40 +11,49 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
-        <a href="index.html" class="nav__logo">Tugboat Manufacturing</a>
+        <a href="index.html" class="nav__logo">
+          <img src="logo.png" alt="" class="nav__logo-img">
+          <span>SFN_MFG</span>
+        </a>
+        <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
         <ul class="nav__links">
-          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="capabilities.html">Capabilities</a></li>
+          <li><a href="quote.html">Get Instant Quote</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- Page Hero -->
     <section class="page-hero section--surface">
       <div class="container">
         <p class="page-hero__eyebrow">Get in Touch</p>
         <h1>Custom jobs &amp;<br><em>special requests</em></h1>
-        <p>Most orders go straight through our instant quote tool &mdash; but some projects need a conversation first. Large batches, unusual materials, tight tolerances, post-processing requirements, or anything that doesn't fit neatly into a form: that's what this page is for.</p>
+        <p>Most orders go straight through our instant quote tool &mdash; but some projects need a conversation first. Large batches, unusual materials, tight tolerances, post-processing requirements: that's what this page is for.</p>
       </div>
     </section>
 
-    <!-- Quote Widget -->
+    <!-- Standard Orders CTA -->
     <section class="section section--surface">
       <div class="container">
         <div class="section-header section-header--center">
           <p class="section-eyebrow">Standard Orders</p>
-          <h2>Get an instant quote</h2>
-          <p>Have an STL or STEP file ready? Get pricing here immediately &mdash; no account required.</p>
+          <h2>Have a file ready?</h2>
+          <p>Upload your STL or STEP file and get an instant quote &mdash; no account required.</p>
         </div>
-        <div class="quote-widget">
-          <iframe src="https://app.autoquote3d.com/widget/u727wvwbausvleplkal7ih7n" frameborder="0" title="Get an Instant Quote">Your browser does not support iframes.</iframe>
+        <div class="quote-cta">
+          <a href="quote.html" class="btn btn--primary">Get Instant Quote</a>
         </div>
       </div>
     </section>
@@ -56,7 +65,6 @@
       <div class="container">
         <div class="contact-layout">
 
-          <!-- Left -->
           <div class="contact-info">
             <p class="section-eyebrow">Custom Jobs</p>
             <h2>Something more<br><em>involved?</em></h2>
@@ -72,7 +80,6 @@
             </ul>
           </div>
 
-          <!-- Right: Form -->
           <div>
             <form class="form" action="#" method="POST" novalidate>
               <div class="form-row">
@@ -126,15 +133,30 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-logo">Tugboat Manufacturing</span>
-        <ul class="footer-links">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-        </ul>
+        <span class="footer-logo">
+          <img src="logo.png" alt="" class="footer-logo__img">
+          SFN_MFG
+        </span>
+        <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
       </div>
-      <p class="footer-copy">&copy; 2026 Tugboat Manufacturing. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('nav__links--open', !open);
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        links.classList.remove('nav__links--open');
+      });
+    });
+  </script>
 
 </body>
 </html>

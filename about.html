@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About &mdash; Tugboat Manufacturing</title>
+  <title>About &mdash; SFN_MFG</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -11,41 +11,50 @@
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
-        <a href="index.html" class="nav__logo">Tugboat Manufacturing</a>
+        <a href="index.html" class="nav__logo">
+          <img src="logo.png" alt="" class="nav__logo-img">
+          <span>SFN_MFG</span>
+        </a>
+        <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
         <ul class="nav__links">
-          <li><a href="index.html">Home</a></li>
           <li><a href="about.html" class="active">About</a></li>
+          <li><a href="capabilities.html">Capabilities</a></li>
+          <li><a href="quote.html">Get Instant Quote</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- Page Hero -->
     <section class="page-hero section--surface">
       <div class="container">
         <p class="page-hero__eyebrow">Based in San Diego, CA</p>
         <h1>Built for builders,<br><em>by builders</em></h1>
-        <p>Tugboat Manufacturing is a San Diego-based print-on-demand shop that believes access to quality manufacturing shouldn't require a Fortune 500 budget.</p>
+        <p>SFN_MFG is a San Diego-based print-on-demand shop that believes access to quality manufacturing shouldn't require a Fortune 500 budget.</p>
       </div>
     </section>
 
     <!-- About Copy -->
     <section class="section">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 96px);">
+        <div class="two-col">
           <div>
             <p class="section-eyebrow">Our Story</p>
             <h2>San Diego roots,<br><em>global reach</em></h2>
           </div>
           <div class="prose">
-            <p>We started Tugboat Manufacturing because we kept running into the same problem: getting a physical part made was either too slow, too expensive, or required minimum orders that made no sense for a one-person operation or a small team. San Diego has a thriving maker and engineering community, and we wanted to build something that served it &mdash; and everyone else who needs real parts without the runaround.</p>
-            <p>3D printing has come a long way. Today's machines produce parts that are dimensionally accurate, mechanically functional, and visually clean enough for end-use applications. Whether you're an engineer testing a new bracket, a small business owner who needs a custom enclosure, or a hobbyist who wants something you simply can't buy off the shelf &mdash; we can make it. Upload your STL or STEP file, choose your material, and get a quote instantly. No phone calls, no back-and-forth, no minimum orders.</p>
+            <p>We started SFN_MFG because we kept running into the same problem: getting a physical part made was either too slow, too expensive, or required minimum orders that made no sense for a one-person operation or a small team. San Diego has a thriving maker and engineering community, and we wanted to build something that served it &mdash; and everyone else who needs real parts without the runaround.</p>
+            <p>3D printing has come a long way. Today's machines produce parts that are dimensionally accurate, mechanically functional, and visually clean enough for end-use applications. Whether you're an engineer testing a new bracket, a small business owner who needs a custom enclosure, or a product team that needs a short run of components &mdash; we can make it. Upload your STL or STEP file, choose your material, and get a quote instantly. No phone calls, no back-and-forth, no minimum orders.</p>
             <p>We're a small operation, and we like it that way. Every order gets our full attention. If something's off about your file or your tolerances look tight, we'll reach out before we print.</p>
           </div>
         </div>
@@ -54,34 +63,35 @@
 
     <hr class="divider">
 
-    <!-- 3D Printing Info -->
+    <!-- Technology -->
     <section class="section section--surface">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 96px);">
+        <div class="two-col">
           <div class="prose prose--wide">
             <p class="section-eyebrow">The Technology</p>
-            <h2 style="font-family: var(--font-heading); font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 400; margin-bottom: 24px;">What makes 3D printing<br><em>so useful</em></h2>
+            <h2>What makes 3D printing<br><em>so useful</em></h2>
             <p>Additive manufacturing works by building parts layer by layer from a digital model. Unlike traditional subtractive methods &mdash; where material is cut away from a block &mdash; 3D printing adds only what's needed, reducing waste and enabling geometries that would be impossible or prohibitively expensive to machine.</p>
             <p>The result is a technology that scales beautifully for low-volume production. One part costs almost the same to make as ten. There are no dies to cut, no molds to pour, no setup fees. For rapid iteration, custom parts, and short runs, it's hard to beat.</p>
-            <p>We work primarily with FDM (fused deposition modeling) and resin-based processes, which cover the vast majority of use cases: structural parts, enclosures, brackets, display pieces, prototypes, and more. Not sure which process is right for your project? <a href="contact.html" style="text-decoration: underline;">Get in touch</a> and we'll help you figure it out.</p>
+            <p>We work primarily with FDM processes using a focused material system &mdash; Standard, Functional, and Reinforced tiers &mdash; covering the vast majority of use cases: structural parts, enclosures, brackets, prototypes, and more. Not sure which material is right for your project? <a href="contact.html" style="text-decoration: underline;">Get in touch</a> and we'll help you figure it out.</p>
           </div>
-          <div style="background-color: var(--color-border); min-height: 360px; display: flex; align-items: center; justify-content: center;">
+          <div style="background-color: var(--color-border); min-height: 360px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img src="https://cdn.pixabay.com/photo/2019/09/14/14/04/printer-4348150_1280.jpg" alt="3D printer in operation" style="width:100%; height:100%; object-fit:cover;">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Quote Widget -->
+    <!-- Quote CTA -->
     <section class="section">
       <div class="container">
         <div class="section-header section-header--center">
-          <p class="section-eyebrow">Let's make something</p>
+          <p class="section-eyebrow">Ready to start?</p>
           <h2>Get an instant quote</h2>
           <p>Upload your file and get pricing in seconds. No account required.</p>
         </div>
-        <div class="quote-widget">
-          <iframe src="https://app.autoquote3d.com/widget/u727wvwbausvleplkal7ih7n" frameborder="0" title="Get an Instant Quote">Your browser does not support iframes.</iframe>
+        <div class="quote-cta">
+          <p class="quote-cta__note">Designed for functional parts and production work. Not intended for decorative or novelty prints.</p>
+          <a href="quote.html" class="btn btn--primary">Get Instant Quote</a>
         </div>
       </div>
     </section>
@@ -91,15 +101,30 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-logo">Tugboat Manufacturing</span>
-        <ul class="footer-links">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-        </ul>
+        <span class="footer-logo">
+          <img src="logo.png" alt="" class="footer-logo__img">
+          SFN_MFG
+        </span>
+        <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
       </div>
-      <p class="footer-copy">&copy; 2026 Tugboat Manufacturing. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('nav__links--open', !open);
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        links.classList.remove('nav__links--open');
+      });
+    });
+  </script>
 
 </body>
 </html>

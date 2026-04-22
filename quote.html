@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get an Instant Quote &mdash; SFN_MFG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="nav__logo">
+          <img src="logo.png" alt="" class="nav__logo-img">
+          <span>SFN_MFG</span>
+        </a>
+        <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="capabilities.html">Capabilities</a></li>
+          <li><a href="quote.html" class="active">Get Instant Quote</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <section class="page-hero section--surface">
+      <div class="container">
+        <p class="page-hero__eyebrow">Instant Pricing</p>
+        <h1>Upload your file and get a<br><em>production-ready quote in seconds</em></h1>
+        <p>No account required. No back-and-forth. Pricing is calculated automatically based on your file, material, and quantity.</p>
+      </div>
+    </section>
+
+    <!-- Quote Tool -->
+    <section class="section">
+      <div class="container">
+
+        <div class="quote-page-layout">
+
+          <!-- Trust sidebar -->
+          <aside class="quote-trust-panel">
+            <p class="section-eyebrow">What to expect</p>
+            <p class="quote-trust-panel__note">Designed for functional parts and production work. Not intended for decorative or novelty prints.</p>
+            <ul class="quote-trust-list">
+              <li>
+                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;</span>
+                <div>
+                  <strong>Consistent materials</strong>
+                  <p>PLA+ and PCTG sourced from 3D-Fuel for reliable, repeatable output.</p>
+                </div>
+              </li>
+              <li>
+                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;</span>
+                <div>
+                  <strong>Production-focused setup</strong>
+                  <p>Configured for functional parts, not decorative or novelty prints.</p>
+                </div>
+              </li>
+              <li>
+                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;</span>
+                <div>
+                  <strong>Built for repeatability</strong>
+                  <p>Consistent output and clean results across every run.</p>
+                </div>
+              </li>
+              <li>
+                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;</span>
+                <div>
+                  <strong>Fast turnaround</strong>
+                  <p>Most jobs ship quickly. Timeline confirmed before production begins.</p>
+                </div>
+              </li>
+              <li>
+                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;</span>
+                <div>
+                  <strong>Pre-production review</strong>
+                  <p>Every file is reviewed for printability before work starts. We'll reach out if anything looks off.</p>
+                </div>
+              </li>
+            </ul>
+            <div class="quote-trust-panel__cta">
+              <p>Need something outside the quote tool?</p>
+              <a href="contact.html" class="btn btn--outline">Custom Job Request</a>
+            </div>
+          </aside>
+
+          <!-- Widget -->
+          <div class="quote-widget quote-widget--page">
+            <iframe
+              src="https://app.autoquote3d.com/widget/u727wvwbausvleplkal7ih7n"
+              frameborder="0"
+              title="Get an Instant Quote"
+              sandbox="allow-scripts allow-forms allow-same-origin">
+              Your browser does not support iframes.
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">
+          <img src="logo.png" alt="" class="footer-logo__img">
+          SFN_MFG
+        </span>
+        <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('nav__links--open', !open);
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        links.classList.remove('nav__links--open');
+      });
+    });
+  </script>
+
+</body>
+</html>
