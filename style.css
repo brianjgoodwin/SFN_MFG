@@ -16,8 +16,9 @@
   --color-text: #1c1a17;
   --color-text-muted: #6b6358;
   --color-accent: #b8734a;
-  --font-heading: 'IBM Plex Mono', 'Courier New', monospace;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Courier', -apple-system-mono, monospace;
+  /* --font-heading: 'IBM Plex Mono', 'Courier New', monospace; */
+  --font-body: 'Courier', system-ui, -apple-system, sans-serif;
   --max-width: 1200px;
   --spacing-section: 96px;
 }
