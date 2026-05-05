@@ -16,7 +16,7 @@
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
-        <a href="index.html" class="nav__logo">
+        <a href="#" class="nav__logo">
           <img src="logo.png" alt="" class="nav__logo-img">
           <span>SFN_MFG</span>
         </a>
@@ -24,10 +24,9 @@
           <span></span><span></span><span></span>
         </button>
         <ul class="nav__links">
-          <li><a href="about.html">About</a></li>
-          <li><a href="capabilities.html">Capabilities</a></li>
-          <li><a href="quote.html">Get Instant Quote</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#quote">Get a Quote</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -37,15 +36,16 @@
 
     <!-- Hero -->
     <section class="hero" aria-label="Hero">
-      <div class="hero__bg" style="background-image: url('hero.jpg');"></div>
+      <div class="hero__bg" style="background-image: 
+      url('hero.jpg');"></div> 
       <div class="container">
         <div class="hero__content">
           <p class="hero__eyebrow">Print on Demand &mdash; San Diego, CA</p>
-          <h1 class="hero__title">Precision 3D Printing for<br><span class="italic">Prototypes &amp; Production</span></h1>
-          <p class="hero__subtitle">Upload your file and get an instant quote. Fast, consistent production for functional parts.</p>
+          <h1 class="hero__title">Precision Parts,<br><span class="italic">On Your Timeline</span></h1>
+          <p class="hero__subtitle">From rapid prototypes to small-batch production runs, SFN_MFG delivers high-quality 3D printed parts &mdash; fast, affordable, and built to spec.</p>
           <div class="hero__actions">
-            <a href="quote.html" class="btn btn--primary">Get Instant Quote</a>
-            <a href="capabilities.html" class="btn btn--outline-light">View Capabilities</a>
+            <a href="#quote" class="btn btn--primary">Get an Instant Quote</a>
+            <a href="#about" class="btn btn--outline-light">About Us</a>
           </div>
         </div>
       </div>
@@ -61,8 +61,8 @@
           </div>
           <div class="prose">
             <p>3D printing has fundamentally changed what's possible for small businesses, engineers, and independent creators. Where traditional manufacturing once required expensive tooling and long lead times, additive manufacturing lets you go from a digital file to a physical part in hours. Whether you need a single prototype to test a concept or a short run of components for a product launch, we handle the heavy lifting so you can stay focused on what matters.</p>
-            <p>Rapid prototyping isn't just for big companies anymore. At SFN_MFG, we work with founders, engineers, small manufacturers, and product designers who need real parts &mdash; not slow timelines and minimum order quantities. Upload your file, get an instant quote, and we'll get your parts in the mail.</p>
-            <a href="quote.html" class="btn btn--outline" style="margin-top: 8px;">Get an Instant Quote &rarr;</a>
+            <p>Rapid prototyping isn't just for big companies anymore. At SFN_MFG, we work with founders, hobbyists, small manufacturers, and product designers who need real parts &mdash; not slow timelines and minimum order quantities. Upload your file, get an instant quote, and we'll get your parts in the mail.</p>
+            <a href="#quote" class="btn btn--outline" style="margin-top: 8px;">Get an Instant Quote &darr;</a>
           </div>
         </div>
       </div>
@@ -76,18 +76,18 @@
         <div class="section-header section-header--center">
           <p class="section-eyebrow">Capabilities</p>
           <h2>What we can make for you</h2>
-          <p>Production-focused setup. Consistent materials. Fast turnaround.</p>
+          <p>Fast turnaround on a wide range of materials and geometries.</p>
         </div>
         <div class="feature-grid">
           <div class="feature-item">
             <div class="feature-item__icon" aria-hidden="true">&#9632;</div>
-            <h3>Precision FDM</h3>
-            <p>Production-grade fused deposition modeling for functional parts, enclosures, brackets, and prototypes. Dimensionally accurate and built for real-world use.</p>
+            <h3>FDM Printing</h3>
+            <p>Workhorse technology for functional parts, jigs, enclosures, and prototypes. Available in PLA, PETG, ABS, and more.</p>
           </div>
           <div class="feature-item">
             <div class="feature-item__icon" aria-hidden="true">&#9632;</div>
-            <h3>Material System</h3>
-            <p>Standard, Functional, and Reinforced material tiers &mdash; including carbon fiber and glass fiber composites. All materials sourced from 3D-Fuel for consistency.</p>
+            <h3>Resin Printing</h3>
+            <p>High-detail parts for miniatures, dental models, jewelry masters, and anything that needs tight tolerances and a smooth surface finish.</p>
           </div>
           <div class="feature-item">
             <div class="feature-item__icon" aria-hidden="true">&#9632;</div>
@@ -96,19 +96,16 @@
           </div>
           <div class="feature-item">
             <div class="feature-item__icon" aria-hidden="true">&#9632;</div>
-            <h3>Small-Batch Production</h3>
-            <p>Consistent quality across short runs with no minimum order. Every job is reviewed before printing begins.</p>
+            <h3>Custom &amp; Batch Orders</h3>
+            <p>Need 5 pieces? 50? We handle small production runs with consistent quality. <a href="#contact" style="text-decoration: underline;">Contact us</a> for custom quotes.</p>
           </div>
-        </div>
-        <div style="text-align: center; margin-top: 48px;">
-          <a href="capabilities.html" class="btn btn--outline">View Full Capabilities</a>
         </div>
       </div>
     </section>
 
     <hr class="divider">
 
-    <!-- About / Our Story -->
+    <!-- About -->
     <section class="section" id="about">
       <div class="container">
         <div class="two-col">
@@ -119,29 +116,23 @@
           <div class="prose">
             <p>We started SFN_MFG because we kept running into the same problem: getting a physical part made was either too slow, too expensive, or required minimum orders that made no sense for a one-person operation or a small team. San Diego has a thriving maker and engineering community, and we wanted to build something that served it &mdash; and everyone else who needs real parts without the runaround.</p>
             <p>Additive manufacturing works by building parts layer by layer from a digital model. Unlike traditional subtractive methods &mdash; where material is cut away from a block &mdash; 3D printing adds only what's needed, reducing waste and enabling geometries that would be impossible or prohibitively expensive to machine. One part costs almost the same to make as ten. No dies, no molds, no setup fees.</p>
+            <p>We work primarily with FDM and resin-based processes, covering the vast majority of use cases: structural parts, enclosures, brackets, display pieces, prototypes, and more. Not sure which process is right for your project? <a href="#contact" style="text-decoration: underline;">Get in touch</a> and we'll help you figure it out.</p>
             <p>We're a small operation, and we like it that way. Every order gets our full attention. If something's off about your file or your tolerances look tight, we'll reach out before we print.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Quote CTA -->
+    <!-- Quote Widget -->
     <section class="section section--surface" id="quote">
       <div class="container">
         <div class="section-header section-header--center">
           <p class="section-eyebrow">Instant Pricing</p>
-          <h2>Get a production-ready quote<br><span class="italic">in seconds</span></h2>
-          <p>Upload your file and get pricing immediately &mdash; no account required.</p>
+          <h2>Get a quote in seconds</h2>
+          <p>Upload your file, choose your material, and get pricing immediately &mdash; no account required.</p>
         </div>
-        <div class="quote-cta">
-          <p class="quote-cta__note">Designed for functional parts and production work. Not intended for decorative or novelty prints.</p>
-          <ul class="quote-trust">
-            <li>Consistent materials (PLA+, PCTG)</li>
-            <li>Production-focused setup</li>
-            <li>Built for repeatability and clean output</li>
-            <li>Fast turnaround on most jobs</li>
-          </ul>
-          <a href="quote.html" class="btn btn--primary">Get Instant Quote</a>
+        <div class="quote-widget">
+          <iframe src="https://app.autoquote3d.com/widget/u727wvwbausvleplkal7ih7n" frameborder="0" title="Get an Instant Quote" sandbox="allow-scripts allow-forms allow-same-origin">Your browser does not support iframes.</iframe>
         </div>
       </div>
     </section>
@@ -154,9 +145,9 @@
           <div class="contact-info">
             <p class="section-eyebrow">Custom Jobs</p>
             <h2>Something more<br><span class="italic">involved?</span></h2>
-            <p>Large batches, unusual materials, tight tolerances, post-processing: use the contact form and we'll get back to you.</p>
+            <p>Large batches, unusual materials, tight tolerances, post-processing: use the form below and we'll get back to you.</p>
 
-            <p class="section-eyebrow" style="margin-top: 0;">Use this for</p>
+            <p class="section-eyebrow" style="margin-top: 0;">Use this form for</p>
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem; color: var(--color-text-muted);">
               <li><span aria-hidden="true">&#8212;&nbsp;</span> Batch orders (50+ parts)</li>
               <li><span aria-hidden="true">&#8212;&nbsp;</span> Multi-part assemblies</li>
@@ -169,7 +160,6 @@
           <div class="contact-email">
             <p class="section-eyebrow">Email us directly</p>
             <a href="mailto:hello@sfnmfg.com" class="contact-email__link">hello@sfnmfg.com</a>
-            <a href="contact.html" class="btn btn--outline" style="margin-top: 24px; align-self: flex-start;">Custom Job Request</a>
           </div>
 
         </div>

@@ -6,7 +6,8 @@
   <title>Contact &mdash; SFN_MFG</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://api.web3forms.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
         <a href="index.html" class="nav__logo">
-          <img src="logo.png" alt="" class="nav__logo-img">
+          <img src="logo.png" alt="" class="nav__logo-img" width="32" height="32">
           <span>SFN_MFG</span>
         </a>
         <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -27,7 +28,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="capabilities.html">Capabilities</a></li>
           <li><a href="quote.html">Get Instant Quote</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -72,23 +73,25 @@
 
             <p class="section-eyebrow" style="margin-top: 0;">Use this form for</p>
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem; color: var(--color-text-muted);">
-              <li>&#8212;&nbsp; Batch orders (50+ parts)</li>
-              <li>&#8212;&nbsp; Multi-part assemblies</li>
-              <li>&#8212;&nbsp; Custom material requests</li>
-              <li>&#8212;&nbsp; Post-processing or finishing</li>
-              <li>&#8212;&nbsp; Anything unusual or complex</li>
+              <li><span aria-hidden="true">&#8212;&nbsp;</span> Batch orders (50+ parts)</li>
+              <li><span aria-hidden="true">&#8212;&nbsp;</span> Multi-part assemblies</li>
+              <li><span aria-hidden="true">&#8212;&nbsp;</span> Custom material requests</li>
+              <li><span aria-hidden="true">&#8212;&nbsp;</span> Post-processing or finishing</li>
+              <li><span aria-hidden="true">&#8212;&nbsp;</span> Anything unusual or complex</li>
             </ul>
           </div>
 
           <div>
-            <form class="form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+            <form class="form" action="https://api.web3forms.com/submit" method="POST">
               <input type="hidden" name="access_key" value="af298652-2bf9-416b-93b3-3e9d76917e42">
               <input type="hidden" name="subject" value="New Custom Job Request — SFN_MFG">
-              <input type="checkbox" name="botcheck" style="display:none">
+              <div style="position: absolute; left: -9999px; top: -9999px;" aria-hidden="true">
+                <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off">
+              </div>
               <div class="form-row">
                 <div class="field">
                   <label for="first-name">First Name</label>
-                  <input type="text" id="first-name" name="first_name" autocomplete="given-name">
+                  <input type="text" id="first-name" name="first_name" autocomplete="given-name" required>
                 </div>
                 <div class="field">
                   <label for="last-name">Last Name</label>
@@ -98,12 +101,12 @@
 
               <div class="field">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" autocomplete="email">
+                <input type="email" id="email" name="email" autocomplete="email" required>
               </div>
 
               <div class="field">
-                <label for="subject">Project Type</label>
-                <select id="subject" name="subject">
+                <label for="project-type">Project Type</label>
+                <select id="project-type" name="project_type">
                   <option value="" disabled selected>Select a category&hellip;</option>
                   <option value="batch">Batch / Volume Order</option>
                   <option value="custom-material">Custom Material</option>
@@ -115,12 +118,7 @@
 
               <div class="field">
                 <label for="message">Tell us about your project</label>
-                <textarea id="message" name="message" placeholder="Describe your part, quantity, material preferences, timeline, and any other relevant details&hellip;"></textarea>
-              </div>
-
-              <div class="field">
-                <label for="file">Attach a file (optional)</label>
-                <input type="file" id="file" name="file" accept=".stl,.step,.stp,.obj,.3mf,.zip" style="padding: 10px 16px; cursor: pointer;">
+                <textarea id="message" name="message" placeholder="Describe your part, quantity, material preferences, timeline, and any other relevant details&hellip;" required></textarea>
               </div>
 
               <button type="submit" class="btn btn--primary" style="align-self: flex-start;">Send Message</button>
@@ -138,7 +136,7 @@
     <div class="container">
       <div class="footer-inner">
         <span class="footer-logo">
-          <img src="logo.png" alt="" class="footer-logo__img">
+          <img src="logo.png" alt="" class="footer-logo__img" width="28" height="28">
           SFN_MFG
         </span>
         <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
@@ -174,22 +172,7 @@
       btn.textContent = 'Send Message';
     });
   </script>
-
-  <script>
-    const toggle = document.querySelector('.nav__toggle');
-    const links = document.querySelector('.nav__links');
-    toggle.addEventListener('click', () => {
-      const open = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!open));
-      links.classList.toggle('nav__links--open', !open);
-    });
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        toggle.setAttribute('aria-expanded', 'false');
-        links.classList.remove('nav__links--open');
-      });
-    });
-  </script>
+  <script src="nav.js"></script>
 
 </body>
 </html>

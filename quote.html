@@ -6,7 +6,8 @@
   <title>Get an Instant Quote &mdash; SFN_MFG</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://app.autoquote3d.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +18,7 @@
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
         <a href="index.html" class="nav__logo">
-          <img src="logo.png" alt="" class="nav__logo-img">
+          <img src="logo.png" alt="" class="nav__logo-img" width="32" height="32">
           <span>SFN_MFG</span>
         </a>
         <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -26,7 +27,7 @@
         <ul class="nav__links">
           <li><a href="about.html">About</a></li>
           <li><a href="capabilities.html">Capabilities</a></li>
-          <li><a href="quote.html" class="active">Get Instant Quote</a></li>
+          <li><a href="quote.html" class="active" aria-current="page">Get Instant Quote</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -101,7 +102,9 @@
           <div class="quote-widget quote-widget--page">
             <iframe
               src="https://app.autoquote3d.com/widget/u727wvwbausvleplkal7ih7n"
-              frameborder="0"
+              loading="lazy"
+              width="900"
+              height="800"
               title="Get an Instant Quote"
               sandbox="allow-scripts allow-forms allow-same-origin">
               Your browser does not support iframes.
@@ -118,7 +121,7 @@
     <div class="container">
       <div class="footer-inner">
         <span class="footer-logo">
-          <img src="logo.png" alt="" class="footer-logo__img">
+          <img src="logo.png" alt="" class="footer-logo__img" width="28" height="28">
           SFN_MFG
         </span>
         <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
@@ -126,21 +129,7 @@
     </div>
   </footer>
 
-  <script>
-    const toggle = document.querySelector('.nav__toggle');
-    const links = document.querySelector('.nav__links');
-    toggle.addEventListener('click', () => {
-      const open = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!open));
-      links.classList.toggle('nav__links--open', !open);
-    });
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        toggle.setAttribute('aria-expanded', 'false');
-        links.classList.remove('nav__links--open');
-      });
-    });
-  </script>
+  <script src="nav.js"></script>
 
 </body>
 </html>
