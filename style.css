@@ -521,6 +521,15 @@ hr.divider {
   border: none;
 }
 
+/* --- Form status message --- */
+.form-status {
+  font-size: 0.9rem;
+  min-height: 1.4em;
+}
+
+.form-status--success { color: #2d6a4f; }
+.form-status--error   { color: #9b2226; }
+
 /* --- Quote CTA block (homepage + inner pages) --- */
 .quote-cta {
   max-width: 560px;

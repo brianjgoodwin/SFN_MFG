@@ -81,7 +81,10 @@
           </div>
 
           <div>
-            <form class="form" action="#" method="POST" novalidate>
+            <form class="form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="access_key" value="af298652-2bf9-416b-93b3-3e9d76917e42">
+              <input type="hidden" name="subject" value="New Custom Job Request — SFN_MFG">
+              <input type="checkbox" name="botcheck" style="display:none">
               <div class="form-row">
                 <div class="field">
                   <label for="first-name">First Name</label>
@@ -121,6 +124,7 @@
               </div>
 
               <button type="submit" class="btn btn--primary" style="align-self: flex-start;">Send Message</button>
+              <p class="form-status" id="form-status" aria-live="polite"></p>
             </form>
           </div>
 
@@ -141,6 +145,35 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const form = document.querySelector('.form');
+    const status = document.getElementById('form-status');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      status.textContent = '';
+      status.className = 'form-status';
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+        const data = await res.json();
+        if (data.success) {
+          status.textContent = 'Message sent — we\'ll be in touch soon.';
+          status.classList.add('form-status--success');
+          form.reset();
+        } else {
+          throw new Error();
+        }
+      } catch {
+        status.textContent = 'Something went wrong. Please email us directly at hello@sfnmfg.com.';
+        status.classList.add('form-status--error');
+      }
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    });
+  </script>
 
   <script>
     const toggle = document.querySelector('.nav__toggle');
