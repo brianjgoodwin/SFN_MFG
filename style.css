@@ -658,6 +658,42 @@ hr.divider {
   max-width: 100%;
 }
 
+.cap-tier__label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: -8px;
+}
+
+.cap-tier__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cap-tier__list li {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  padding-left: 14px;
+  position: relative;
+}
+
+.cap-tier__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  background: var(--color-accent);
+  border-radius: 50%;
+}
+
 /* --- Responsive --- */
 @media (max-width: 900px) {
   .split-section { grid-template-columns: 1fr; }
