@@ -16,8 +16,10 @@
   --color-text: #1c1a17;
   --color-text-muted: #6b6358;
   --color-accent: #b8734a;
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  /* --font-heading: Courier; */
+  --font-body: Courier;
+  --font-heading: -apple-system, sans-serif;
+  /* --font-body: 'Inter', system-ui, -apple-system, sans-serif; */
   --max-width: 1200px;
   --spacing-section: 96px;
 }
@@ -668,6 +670,42 @@ hr.divider {
   font-size: 0.95rem;
   color: var(--color-text-muted);
   max-width: 100%;
+}
+
+.cap-tier__label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: -8px;
+}
+
+.cap-tier__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cap-tier__list li {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  padding-left: 14px;
+  position: relative;
+}
+
+.cap-tier__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  background: var(--color-accent);
+  border-radius: 50%;
 }
 
 /* --- Responsive --- */
