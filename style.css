@@ -108,9 +108,9 @@ p { max-width: 65ch; }
 }
 
 .nav__logo-img {
-  height: 32px;
-  width: 32px;
-  object-fit: contain;
+  height: 256px;
+  width: auto;
+  /* object-fit: contain; */
 }
 
 .nav__toggle {
@@ -464,7 +464,7 @@ p { max-width: 65ch; }
 
 .footer-logo__img {
   height: 28px;
-  width: 28px;
+  width: auto;
   object-fit: contain;
   filter: invert(1);
 }

@@ -2,7 +2,17 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:commons.wikimedia.org)",
-      "Bash(grep -E \"\\\\.\\(css|js|json\\)$|^d\")"
+      "Bash(grep -E \"\\\\.\\(css|js|json\\)$|^d\")",
+      "WebFetch(domain:www.rtings.com)",
+      "WebFetch(domain:www.techradar.com)",
+      "WebFetch(domain:hackaday.com)",
+      "WebFetch(domain:www.tomshardware.com)",
+      "WebFetch(domain:www.pcmag.com)",
+      "WebFetch(domain:www.tomsguide.com)",
+      "WebFetch(domain:www.engadget.com)",
+      "WebFetch(domain:www.cnbc.com)",
+      "WebFetch(domain:3dprintingindustry.com)",
+      "WebFetch(domain:www.theverge.com)"
     ]
   }
 }
