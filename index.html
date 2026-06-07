@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SFN_MFG — 3D Printing, San Diego</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
 
@@ -16,17 +17,17 @@
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
-        <a href="#" class="nav__logo">
-          <img src="SFN_MFG_STUDIO_MARK.svg" alt="" class="nav__logo-img">
-
+        <a href="#" class="nav__logo" aria-label="SFN_MFG — Home">
+          <img src="SFN_MFG_STUDIO_MARK.svg" alt="" class="nav__logo-img" width="32" height="32">
         </a>
-        <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
           <span></span><span></span><span></span>
         </button>
-        <ul class="nav__links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#quote">Get a Quote</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="nav__links" id="nav-menu">
+          <li><a href="about.html">About</a></li>
+          <li><a href="capabilities.html">Capabilities</a></li>
+          <li><a href="quote.html">Get Instant Quote</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -41,7 +42,7 @@
       <div class="container">
         <div class="hero__content">
           <p class="hero__eyebrow">Print on Demand &mdash; San Diego, CA</p>
-          <h1 class="hero__title">Precision Parts,<br><span class="italic">On Your Timeline</span></h1>
+          <h1 class="hero__title">Precision Parts,<br><em>On Your Timeline</em></h1>
           <p class="hero__subtitle">From rapid prototypes to small-batch production runs, SFN_MFG delivers high-quality 3D printed parts &mdash; fast, affordable, and built to spec.</p>
           <div class="hero__actions">
             <a href="#quote" class="btn btn--primary">Get an Instant Quote</a>
@@ -57,7 +58,7 @@
         <div class="two-col">
           <div>
             <p class="section-eyebrow">What We Do</p>
-            <h2>3D Printing for<br><span class="italic">the real world</span></h2>
+            <h2>3D Printing for<br><em>the real world</em></h2>
           </div>
           <div class="prose">
             <p>3D printing has fundamentally changed what's possible for small businesses, engineers, and independent creators. Where traditional manufacturing once required expensive tooling and long lead times, additive manufacturing lets you go from a digital file to a physical part in hours. Whether you need a single prototype to test a concept or a short run of components for a product launch, we handle the heavy lifting so you can stay focused on what matters.</p>
@@ -111,7 +112,7 @@
         <div class="two-col">
           <div>
             <p class="section-eyebrow">Our Story</p>
-            <h2>San Diego roots,<br><span class="italic">global reach</span></h2>
+            <h2>San Diego roots,<br><em>global reach</em></h2>
           </div>
           <div class="prose">
             <p>We started SFN_MFG because we kept running into the same problem: getting a physical part made was either too slow, too expensive, or required minimum orders that made no sense for a one-person operation or a small team. San Diego has a thriving maker and engineering community, and we wanted to build something that served it &mdash; and everyone else who needs real parts without the runaround.</p>
@@ -132,7 +133,7 @@
           <p>Upload your file, choose your material, and get pricing immediately &mdash; no account required.</p>
         </div>
         <div class="quote-widget">
-          <iframe src="https://app.autoquote3d.com/widget/u727wvwbausvleplkal7ih7n" frameborder="0" title="Get an Instant Quote" sandbox="allow-scripts allow-forms allow-same-origin">Your browser does not support iframes.</iframe>
+          <iframe src="https://app.autoquote3d.com/widget/u727wvwbausvleplkal7ih7n" frameborder="0" title="Get an Instant Quote" sandbox="allow-scripts allow-forms allow-same-origin">Your browser does not support this quote tool. Please <a href="contact.html">contact us directly</a> to request a quote.</iframe>
         </div>
       </div>
     </section>
@@ -144,7 +145,7 @@
 
           <div class="contact-info">
             <p class="section-eyebrow">Custom Jobs</p>
-            <h2>Something more<br><span class="italic">involved?</span></h2>
+            <h2>Something more<br><em>involved?</em></h2>
             <p>Large batches, unusual materials, tight tolerances, post-processing: use the form below and we'll get back to you.</p>
 
             <p class="section-eyebrow" style="margin-top: 0;">Use this form for</p>
@@ -172,28 +173,14 @@
     <div class="container">
       <div class="footer-inner">
         <span class="footer-logo">
-          <img src="SFN_MFG_STUDIO_MARK.svg" alt="" class="footer-logo__img">
+          <img src="SFN_MFG_STUDIO_MARK.svg" alt="" class="footer-logo__img" width="28" height="28">
         </span>
         <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    const toggle = document.querySelector('.nav__toggle');
-    const links = document.querySelector('.nav__links');
-    toggle.addEventListener('click', () => {
-      const open = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!open));
-      links.classList.toggle('nav__links--open', !open);
-    });
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        toggle.setAttribute('aria-expanded', 'false');
-        links.classList.remove('nav__links--open');
-      });
-    });
-  </script>
+  <script src="nav.js"></script>
 
 </body>
 </html>

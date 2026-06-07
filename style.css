@@ -16,8 +16,7 @@
   --color-text: #1c1a17;
   --color-text-muted: #6b6358;
   --color-accent: #b8734a;
-  --font-heading: 'Courier', -apple-system-mono, monospace;
-  /* --font-heading: 'IBM Plex Mono', 'Courier New', monospace; */
+  --font-heading: 'Courier New', 'Courier', monospace;
   --font-body: 'Courier', system-ui, -apple-system, sans-serif;
   --max-width: 1200px;
   --spacing-section: 96px;
@@ -108,9 +107,8 @@ p { max-width: 65ch; }
 }
 
 .nav__logo-img {
-  height: 256px;
+  height: 32px;
   width: auto;
-  /* object-fit: contain; */
 }
 
 .nav__toggle {
@@ -437,6 +435,12 @@ p { max-width: 65ch; }
 
 .field textarea { resize: vertical; min-height: 140px; }
 
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
 /* --- Footer --- */
 .site-footer {
   background-color: var(--color-text);
@@ -529,29 +533,6 @@ hr.divider {
   padding-left: 16px;
 }
 
-.quote-trust {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: left;
-  width: 100%;
-  max-width: 400px;
-}
-
-.quote-trust li {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-}
-
-.quote-trust li::before {
-  content: '—';
-  color: var(--color-accent);
-  flex-shrink: 0;
-}
 
 /* --- Quote page: sidebar + widget layout --- */
 .quote-page-layout {
@@ -697,7 +678,6 @@ hr.divider {
 
 /* --- Responsive --- */
 @media (max-width: 900px) {
-  .split-section { grid-template-columns: 1fr; }
   .two-col { grid-template-columns: 1fr; }
   .contact-layout { grid-template-columns: 1fr; }
   .quote-page-layout { grid-template-columns: 1fr; }
