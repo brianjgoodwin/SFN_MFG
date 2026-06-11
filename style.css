@@ -603,6 +603,7 @@ hr.divider {
   gap: 24px;
   position: sticky;
   top: 88px;
+  min-width: 0;
 }
 
 .quote-trust-panel__note {
@@ -625,6 +626,11 @@ hr.divider {
   display: flex;
   gap: 12px;
   align-items: flex-start;
+}
+
+.quote-trust-list li > div {
+  flex: 1;
+  min-width: 0;
 }
 
 .quote-trust-list__icon {
