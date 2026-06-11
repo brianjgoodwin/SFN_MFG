@@ -592,7 +592,7 @@ hr.divider {
 /* --- Quote page: sidebar + widget layout --- */
 .quote-page-layout {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: minmax(0, 300px) 1fr;
   gap: clamp(40px, 5vw, 80px);
   align-items: start;
 }
@@ -604,6 +604,9 @@ hr.divider {
   position: sticky;
   top: 88px;
   min-width: 0;
+  width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .quote-trust-panel__note {
