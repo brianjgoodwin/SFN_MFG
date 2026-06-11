@@ -27,7 +27,7 @@
         <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
           <span></span><span></span><span></span>
         </button>
-        <ul class="nav__links" id="nav-menu">
+        <ul class="nav__links" id="nav-menu" role="list">
           <li><a href="about.html">About</a></li>
           <li><a href="what-we-manufacture.html">What We Manufacture</a></li>
           <li><a href="manufacturing-standards.html">Standards</a></li>
@@ -42,7 +42,7 @@
   <main id="main-content">
 
     <!-- Hero -->
-    <section class="hero" aria-label="Hero">
+    <section class="hero" aria-label="Introduction">
       <div class="hero__bg" style="background-image: url('hero.jpg');"></div>
       <div class="container">
         <div class="hero__content">
@@ -68,7 +68,7 @@
           <div class="prose">
             <p>SFN_MFG is a fabrication studio based in San Diego, California. We produce professionally printed prototypes, functional components, replacement parts, and small-batch production runs.</p>
             <p>Every order receives a pre-production review. We confirm printability, evaluate geometry and orientation, and verify material selection before anything is printed. If something in your file needs to be addressed, we reach out before we print.</p>
-            <a href="quote.html" class="btn btn--outline" style="margin-top: 8px;">Get a Quote &darr;</a>
+            <a href="quote.html" class="btn btn--outline">Get a Quote &darr;</a>
           </div>
         </div>
       </div>
@@ -121,7 +121,7 @@
             <p>Additive manufacturing is most effective when approached as a production process. Controlled materials, standardized production methods, documented inspection, and clear communication help ensure consistent results from quote through delivery.</p>
             <p>Digital models become physical parts through a repeatable production process designed for prototypes, replacement parts, and low-volume runs. No dies, no molds, no setup fees.</p>
             <p>SFN_MFG operates a production-focused setup built around a controlled material system covering three performance tiers: General, Functional, and Reinforced.</p>
-            <a href="about.html" class="btn btn--outline" style="margin-top: 8px;">About SFN_MFG</a>
+            <a href="about.html" class="btn btn--outline">About SFN_MFG</a>
           </div>
         </div>
       </div>
@@ -137,7 +137,7 @@
           <p style="margin-top: 8px; color: var(--color-text-muted); font-size: 0.95rem;">Every project is reviewed before manufacturing begins. Final pricing and timeline are confirmed prior to manufacturing.</p>
         </div>
         <div class="quote-widget">
-          <iframe src="https://app.autoquote3d.com/widget/u727wvwbausvleplkal7ih7n" frameborder="0" title="Get an Instant Quote" sandbox="allow-scripts allow-forms allow-same-origin">Your browser does not support this quote tool. Please <a href="contact.html">contact us directly</a> to request a quote.</iframe>
+          <iframe src="https://app.autoquote3d.com/widget/u727wvwbausvleplkal7ih7n" title="Get an Instant Quote" sandbox="allow-scripts allow-forms allow-same-origin">Your browser does not support this quote tool. Please <a href="contact.html">contact us directly</a> to request a quote.</iframe>
         </div>
       </div>
     </section>
@@ -153,7 +153,7 @@
             <p>If you'd like to discuss materials, larger quantities, timelines, or other requirements before requesting a quote, use the contact form and we'll get back to you.</p>
 
             <p class="section-eyebrow" style="margin-top: 0;">Use this form for</p>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem; color: var(--color-text-muted);">
+            <ul role="list" style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem; color: var(--color-text-muted);">
               <li><span aria-hidden="true">&#8212;&nbsp;</span> Large batches and volume orders</li>
               <li><span aria-hidden="true">&#8212;&nbsp;</span> Multi-part assemblies</li>
               <li><span aria-hidden="true">&#8212;&nbsp;</span> Non-standard production requirements</li>
@@ -176,13 +176,13 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-logo">
+        <div class="footer-logo">
           <img src="SFN_MFG_LOGO.svg" alt="" class="footer-logo__img" width="28" height="28">
           <span class="footer-logo__text">
             <span class="footer-logo__line1">Useful things.</span>
             <span class="footer-logo__line2">Professionally printed.</span>
           </span>
-        </span>
+        </div>
         <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
       </div>
     </div>

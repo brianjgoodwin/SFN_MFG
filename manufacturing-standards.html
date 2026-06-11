@@ -27,7 +27,7 @@
         <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
           <span></span><span></span><span></span>
         </button>
-        <ul class="nav__links" id="nav-menu">
+        <ul class="nav__links" id="nav-menu" role="list">
           <li><a href="about.html">About</a></li>
           <li><a href="what-we-manufacture.html">What We Manufacture</a></li>
           <li><a href="manufacturing-standards.html" class="active" aria-current="page">Standards</a></li>
@@ -42,10 +42,10 @@
   <main id="main-content">
 
     <!-- Page Hero -->
-    <section class="page-hero section--surface">
+    <section class="page-hero section--surface" aria-labelledby="page-title">
       <div class="container">
         <p class="page-hero__eyebrow">Manufacturing Standards</p>
-        <h1>The same standards,<br>every project</h1>
+        <h1 id="page-title">The same standards,<br>every project</h1>
         <p>Every project receives the same review process and manufacturing standards regardless of order size.</p>
       </div>
     </section>
@@ -161,13 +161,13 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-logo">
+        <div class="footer-logo">
           <img src="SFN_MFG_LOGO.svg" alt="" class="footer-logo__img" width="28" height="28">
           <span class="footer-logo__text">
             <span class="footer-logo__line1">Useful things.</span>
             <span class="footer-logo__line2">Professionally printed.</span>
           </span>
-        </span>
+        </div>
         <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
       </div>
     </div>

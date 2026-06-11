@@ -28,7 +28,7 @@
         <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
           <span></span><span></span><span></span>
         </button>
-        <ul class="nav__links" id="nav-menu">
+        <ul class="nav__links" id="nav-menu" role="list">
           <li><a href="about.html">About</a></li>
           <li><a href="what-we-manufacture.html">What We Manufacture</a></li>
           <li><a href="manufacturing-standards.html">Standards</a></li>
@@ -43,10 +43,10 @@
   <main id="main-content">
 
     <!-- Page Hero -->
-    <section class="page-hero section--surface">
+    <section class="page-hero section--surface" aria-labelledby="page-title">
       <div class="container">
         <p class="page-hero__eyebrow">Request a Quote</p>
-        <h1>Estimate your project in seconds.</h1>
+        <h1 id="page-title">Estimate your project in seconds.</h1>
         <p>Upload your file and receive automated pricing based on your model, material, and quantity. No account required.</p>
         <p style="margin-top: 12px;">Every project is reviewed before production begins. Final pricing and timeline are confirmed prior to manufacturing.</p>
       </div>
@@ -62,37 +62,37 @@
           <aside class="quote-trust-panel">
             <p class="section-eyebrow">What to expect</p>
             <p class="quote-trust-panel__note">Designed for functional parts and production work. Not intended for decorative or novelty prints.</p>
-            <ul class="quote-trust-list">
+            <ul class="quote-trust-list" role="list">
               <li>
-                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;</span>
+                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;
                 <div>
                   <strong>Consistent materials</strong>
                   <p>PLA+ and PCTG sourced from 3D-Fuel for reliable, repeatable output.</p>
                 </div>
               </li>
               <li>
-                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;</span>
+                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;
                 <div>
                   <strong>Production-focused setup</strong>
                   <p>Configured for functional parts, not decorative or novelty prints.</p>
                 </div>
               </li>
               <li>
-                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;</span>
+                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;
                 <div>
                   <strong>Built for repeatability</strong>
                   <p>Consistent output and clean results across every run.</p>
                 </div>
               </li>
               <li>
-                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;</span>
+                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;
                 <div>
                   <strong>Fast turnaround</strong>
                   <p>Most jobs ship quickly. Timeline confirmed before production begins.</p>
                 </div>
               </li>
               <li>
-                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;</span>
+                <span class="quote-trust-list__icon" aria-hidden="true">&#9632;
                 <div>
                   <strong>Pre-production review</strong>
                   <p>Every file is reviewed for printability before work starts. We'll reach out if anything looks off.</p>
@@ -110,8 +110,6 @@
             <iframe
               src="https://app.autoquote3d.com/widget/u727wvwbausvleplkal7ih7n"
               loading="lazy"
-              width="900"
-              height="800"
               title="Get an Instant Quote"
               sandbox="allow-scripts allow-forms allow-same-origin">
               Your browser does not support this quote tool. Please <a href="contact.html">contact us directly</a> to request a quote.
@@ -127,13 +125,13 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-logo">
+        <div class="footer-logo">
           <img src="SFN_MFG_LOGO.svg" alt="" class="footer-logo__img" width="28" height="28">
           <span class="footer-logo__text">
             <span class="footer-logo__line1">Useful things.</span>
             <span class="footer-logo__line2">Professionally printed.</span>
           </span>
-        </span>
+        </div>
         <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
       </div>
     </div>

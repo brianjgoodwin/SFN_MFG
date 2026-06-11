@@ -27,7 +27,7 @@
         <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
           <span></span><span></span><span></span>
         </button>
-        <ul class="nav__links" id="nav-menu">
+        <ul class="nav__links" id="nav-menu" role="list">
           <li><a href="about.html" class="active" aria-current="page">About</a></li>
           <li><a href="what-we-manufacture.html">What We Manufacture</a></li>
           <li><a href="manufacturing-standards.html">Standards</a></li>
@@ -42,10 +42,10 @@
   <main id="main-content">
 
     <!-- Page Hero -->
-    <section class="page-hero section--surface">
+    <section class="page-hero section--surface" aria-labelledby="page-title">
       <div class="container">
         <p class="page-hero__eyebrow">Based in San Diego, CA</p>
-        <h1>SFN_MFG &mdash;<br>Something From Nothing Manufacturing</h1>
+        <h1 id="page-title">SFN_MFG &mdash;<br>Something From Nothing Manufacturing</h1>
         <p>A fabrication studio based in San Diego, California. Customer-supplied models. Professionally manufactured parts.</p>
       </div>
     </section>
@@ -80,7 +80,7 @@
           <div class="prose">
             <p>Every order at SFN_MFG follows the same process. Before production begins, we review the file &mdash; confirming printability, evaluating geometry, assessing orientation, and verifying material selection. If anything needs to be addressed, we reach out before we print. Final pricing and timeline are confirmed before work starts.</p>
             <p>During production, we apply standardized profiles, controlled material selection, and dimensional and visual inspection to every job. Documentation is included with every production order.</p>
-            <a href="manufacturing-standards.html" class="btn btn--outline" style="margin-top: 8px;">Manufacturing Standards &rarr;</a>
+            <a href="manufacturing-standards.html" class="btn btn--outline"> Manufacturing Standards &rarr;</a>
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@
             <h2>Additive manufacturing<br>as a production process</h2>
             <p>Additive manufacturing builds parts layer by layer from a digital model. Unlike traditional subtractive methods &mdash; where material is cut away from a block &mdash; it adds only what is needed. The result is a process that scales efficiently for low-volume production.</p>
             <p>Additive manufacturing remains cost-effective for prototypes, replacement parts, and low-volume production where traditional tooling would be impractical. No dies, no molds, no setup fees.</p>
-            <p>SFN_MFG operates a production-focused setup built around a controlled material system covering three performance tiers: General, Functional, and Reinforced. Not sure which material is right for your project? <a href="materials.html" style="text-decoration: underline;">See Materials</a> or <a href="contact.html" style="text-decoration: underline;">get in touch</a>.</p>
+            <p>SFN_MFG operates a production-focused setup built around a controlled material system covering three performance tiers: General, Functional, and Reinforced. Not sure which material is right for your project? <a href="materials.html">See Materials</a> or <a href="contact.html">get in touch</a>.</p>
           </div>
           <div style="background-color: var(--color-border); min-height: 360px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
             <img src="printer.jpg" alt="3D printer in operation" width="1280" height="853" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
@@ -126,13 +126,13 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-logo">
+        <div class="footer-logo">
           <img src="SFN_MFG_LOGO.svg" alt="" class="footer-logo__img" width="28" height="28">
           <span class="footer-logo__text">
             <span class="footer-logo__line1">Useful things.</span>
             <span class="footer-logo__line2">Professionally printed.</span>
           </span>
-        </span>
+        </div>
         <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
       </div>
     </div>

@@ -27,7 +27,7 @@
         <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
           <span></span><span></span><span></span>
         </button>
-        <ul class="nav__links" id="nav-menu">
+        <ul class="nav__links" id="nav-menu" role="list">
           <li><a href="about.html">About</a></li>
           <li><a href="what-we-manufacture.html">What We Manufacture</a></li>
           <li><a href="manufacturing-standards.html">Standards</a></li>
@@ -42,10 +42,10 @@
   <main id="main-content">
 
     <!-- Page Hero -->
-    <section class="page-hero section--surface">
+    <section class="page-hero section--surface" aria-labelledby="page-title">
       <div class="container">
         <p class="page-hero__eyebrow">Materials</p>
-        <h1>A controlled material system<br>built for functional performance</h1>
+        <h1 id="page-title">A controlled material system<br>built for functional performance</h1>
         <p>Materials are organized into three tiers &mdash; General, Functional, and Reinforced &mdash; covering the majority of functional use cases. Standardized production profiles are applied to every order.</p>
       </div>
     </section>
@@ -74,7 +74,7 @@
             <p>For parts intended for real-world use.</p>
             <p>Parts produced to perform, not just to represent the finished product.</p>
             <p class="cap-tier__label">Examples</p>
-            <ul class="cap-tier__list">
+            <ul class="cap-tier__list" role="list">
               <li>Brackets</li>
               <li>Mounts</li>
               <li>Enclosures</li>
@@ -89,7 +89,7 @@
             <p>For demanding environments and higher-performance applications.</p>
             <p>Reinforced materials are intended for applications where increased stiffness, thermal performance, or other application-specific requirements make fiber-reinforced materials appropriate.</p>
             <p class="cap-tier__label">Examples</p>
-            <ul class="cap-tier__list">
+            <ul class="cap-tier__list" role="list">
               <li>Load-bearing applications</li>
               <li>Outdoor environments</li>
               <li>Elevated-temperature environments</li>
@@ -124,7 +124,7 @@
             <h2>We'll handle the material</h2>
             <div class="prose" style="margin-top: 20px;">
               <p>You do not need to specify a material when you submit your file. Tell us what your part needs to do, and we will recommend the correct specification before production begins.</p>
-              <p>You can also <a href="contact.html" style="text-decoration: underline;">reach out directly</a> before uploading if you would like a recommendation upfront.</p>
+              <p>You can also <a href="contact.html">reach out directly</a> before uploading if you would like a recommendation upfront.</p>
             </div>
           </div>
 
@@ -154,13 +154,13 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-logo">
+        <div class="footer-logo">
           <img src="SFN_MFG_LOGO.svg" alt="" class="footer-logo__img" width="28" height="28">
           <span class="footer-logo__text">
             <span class="footer-logo__line1">Useful things.</span>
             <span class="footer-logo__line2">Professionally printed.</span>
           </span>
-        </span>
+        </div>
         <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
       </div>
     </div>

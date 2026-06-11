@@ -28,7 +28,7 @@
         <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
           <span></span><span></span><span></span>
         </button>
-        <ul class="nav__links" id="nav-menu">
+        <ul class="nav__links" id="nav-menu" role="list">
           <li><a href="about.html">About</a></li>
           <li><a href="what-we-manufacture.html">What We Manufacture</a></li>
           <li><a href="manufacturing-standards.html">Standards</a></li>
@@ -43,10 +43,10 @@
   <main id="main-content">
 
     <!-- Page Hero -->
-    <section class="page-hero section--surface">
+    <section class="page-hero section--surface" aria-labelledby="page-title">
       <div class="container">
         <p class="page-hero__eyebrow">Get in Touch</p>
-        <h1>Some projects deserve<br>a conversation first.</h1>
+        <h1 id="page-title">Some projects deserve<br>a conversation first.</h1>
         <p>If you'd like to discuss materials, larger quantities, timelines, or other project requirements before requesting a quote, use the contact form and we'll get back to you.</p>
       </div>
     </section>
@@ -78,7 +78,7 @@
             <p>If you'd like to discuss materials, larger quantities, timelines, or other project requirements before requesting a quote, use the contact form and we'll get back to you.</p>
 
             <p class="section-eyebrow" style="margin-top: 0;">Use this form for</p>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem; color: var(--color-text-muted);">
+            <ul role="list" style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem; color: var(--color-text-muted);">
               <li><span aria-hidden="true">&#8212;&nbsp;</span> Batch orders (50+ parts)</li>
               <li><span aria-hidden="true">&#8212;&nbsp;</span> Multi-part assemblies</li>
               <li><span aria-hidden="true">&#8212;&nbsp;</span> Custom material requests</li>
@@ -128,7 +128,7 @@
               </div>
 
               <button type="submit" class="btn btn--primary" style="align-self: flex-start;">Send Message</button>
-              <p class="form-status" id="form-status" aria-live="polite"></p>
+              <p class="form-status" id="form-status" aria-live="polite" tabindex="-1"></p>
               <p style="margin-top: 16px; font-size: 0.9rem; color: var(--color-text-muted);">Every inquiry is reviewed before a response is sent.</p>
             </form>
           </div>
@@ -142,13 +142,13 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-logo">
+        <div class="footer-logo">
           <img src="SFN_MFG_LOGO.svg" alt="" class="footer-logo__img" width="28" height="28">
           <span class="footer-logo__text">
             <span class="footer-logo__line1">Useful things.</span>
             <span class="footer-logo__line2">Professionally printed.</span>
           </span>
-        </span>
+        </div>
         <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
       </div>
     </div>
@@ -171,11 +171,12 @@
           status.textContent = 'Message sent — we\'ll be in touch soon.';
           status.classList.add('form-status--success');
           form.reset();
+          status.focus();
         } else {
           throw new Error();
         }
       } catch {
-        status.textContent = 'Something went wrong. Please email us directly at hello@sfnmfg.com.';
+        status.textContent = 'Something went wrong. Please email us directly at studio@sfnmfg.com.';
         status.classList.add('form-status--error');
       }
       btn.disabled = false;
