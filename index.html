@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SFN_MFG — 3D Printing, San Diego</title>
+  <title>SFN_MFG — Fabrication Studio, San Diego</title>
   <link rel="stylesheet" href="style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -17,15 +17,21 @@
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Main navigation">
-        <a href="#" class="nav__logo" aria-label="SFN_MFG — Home">
-          <img src="SFN_MFG_STUDIO_MARK.svg" alt="" class="nav__logo-img" width="32" height="32">
+        <a href="index.html" class="nav__logo" aria-label="SFN_MFG — Home">
+          <img src="SFN_MFG_LOGO.svg" alt="" class="nav__logo-img" width="36" height="36">
+          <span class="nav__logo-text">
+            <span class="nav__logo-line1">Useful things.</span>
+            <span class="nav__logo-line2">Professionally printed.</span>
+          </span>
         </a>
         <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
           <span></span><span></span><span></span>
         </button>
         <ul class="nav__links" id="nav-menu">
           <li><a href="about.html">About</a></li>
-          <li><a href="capabilities.html">Capabilities</a></li>
+          <li><a href="what-we-manufacture.html">What We Manufacture</a></li>
+          <li><a href="manufacturing-standards.html">Manufacturing Standards</a></li>
+          <li><a href="materials.html">Materials</a></li>
           <li><a href="quote.html">Get Instant Quote</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -37,16 +43,15 @@
 
     <!-- Hero -->
     <section class="hero" aria-label="Hero">
-      <div class="hero__bg" style="background-image: 
-      url('hero.jpg');"></div> 
+      <div class="hero__bg" style="background-image: url('hero.jpg');"></div>
       <div class="container">
         <div class="hero__content">
-          <p class="hero__eyebrow">Print on Demand &mdash; San Diego, CA</p>
-          <h1 class="hero__title">Precision Parts,<br><em>On Your Timeline</em></h1>
-          <p class="hero__subtitle">From rapid prototypes to small-batch production runs, SFN_MFG delivers high-quality 3D printed parts &mdash; fast, affordable, and built to spec.</p>
+          <p class="hero__eyebrow">Fabrication Studio &mdash; San Diego, CA</p>
+          <h1 class="hero__title">Useful things.<br><em>Professionally printed.</em></h1>
+          <p class="hero__subtitle">SFN_MFG manufactures useful things from customer-supplied models.</p>
           <div class="hero__actions">
-            <a href="#quote" class="btn btn--primary">Get an Instant Quote</a>
-            <a href="#about" class="btn btn--outline-light">About Us</a>
+            <a href="quote.html" class="btn btn--primary">Get an Instant Quote</a>
+            <a href="what-we-manufacture.html" class="btn btn--outline-light">What We Manufacture</a>
           </div>
         </div>
       </div>
@@ -58,12 +63,12 @@
         <div class="two-col">
           <div>
             <p class="section-eyebrow">What We Do</p>
-            <h2>3D Printing for<br><em>the real world</em></h2>
+            <h2>Customer-supplied models.<br><em>Professionally manufactured parts.</em></h2>
           </div>
           <div class="prose">
-            <p>3D printing has fundamentally changed what's possible for small businesses, engineers, and independent creators. Where traditional manufacturing once required expensive tooling and long lead times, additive manufacturing lets you go from a digital file to a physical part in hours. Whether you need a single prototype to test a concept or a short run of components for a product launch, we handle the heavy lifting so you can stay focused on what matters.</p>
-            <p>Rapid prototyping isn't just for big companies anymore. At SFN_MFG, we work with founders, hobbyists, small manufacturers, and product designers who need real parts &mdash; not slow timelines and minimum order quantities. Upload your file, get an instant quote, and we'll get your parts in the mail.</p>
-            <a href="#quote" class="btn btn--outline" style="margin-top: 8px;">Get an Instant Quote &darr;</a>
+            <p>SFN_MFG is a fabrication studio based in San Diego, California. We produce professionally printed prototypes, functional components, replacement parts, and small-batch production runs.</p>
+            <p>Every order receives a pre-production review. We confirm printability, evaluate geometry and orientation, and verify material selection before anything is printed. If something in your file needs to be addressed, we reach out before we print.</p>
+            <a href="quote.html" class="btn btn--outline" style="margin-top: 8px;">Get an Instant Quote &darr;</a>
           </div>
         </div>
       </div>
@@ -71,35 +76,33 @@
 
     <hr class="divider">
 
-    <!-- Capabilities -->
+    <!-- What We Manufacture -->
     <section class="section section--surface">
       <div class="container">
         <div class="section-header section-header--center">
-          <p class="section-eyebrow">Capabilities</p>
-          <h2>What we can make for you</h2>
-          <p>Fast turnaround on a wide range of materials and geometries.</p>
+          <p class="section-eyebrow">What We Manufacture</p>
+          <h2>From a single prototype<br>to a short production run</h2>
+          <p>Every project receives the same manufacturing review process and quality standards before manufacturing begins.</p>
         </div>
         <div class="feature-grid">
           <div class="feature-item">
             <div class="feature-item__icon" aria-hidden="true">&#9632;</div>
-            <h3>FDM Printing</h3>
-            <p>Workhorse technology for functional parts, jigs, enclosures, and prototypes. Available in PLA, PETG, ABS, and more.</p>
+            <h3>Prototypes</h3>
+            <p>Physical parts manufactured for evaluation, fit checks, testing, and validation.</p>
           </div>
           <div class="feature-item">
             <div class="feature-item__icon" aria-hidden="true">&#9632;</div>
-            <h3>Resin Printing</h3>
-            <p>High-detail parts for miniatures, dental models, jewelry masters, and anything that needs tight tolerances and a smooth surface finish.</p>
+            <h3>Replacement Parts</h3>
+            <p>Reproduce components that are discontinued, difficult to source, or in need of modification. We work from customer-supplied models and, when required, customer-provided specifications.</p>
           </div>
           <div class="feature-item">
             <div class="feature-item__icon" aria-hidden="true">&#9632;</div>
-            <h3>Rapid Prototyping</h3>
-            <p>Get a physical prototype in your hands within days. Test fit, form, and function before committing to tooling or production.</p>
+            <h3>Small-Batch Production</h3>
+            <p>Short production runs manufactured from customer-supplied models using the same review process and manufacturing standards applied to every project.</p>
           </div>
-          <div class="feature-item">
-            <div class="feature-item__icon" aria-hidden="true">&#9632;</div>
-            <h3>Custom &amp; Batch Orders</h3>
-            <p>Need 5 pieces? 50? We handle small production runs with consistent quality. <a href="#contact" style="text-decoration: underline;">Contact us</a> for custom quotes.</p>
-          </div>
+        </div>
+        <div style="text-align: center; margin-top: 32px;">
+          <a href="what-we-manufacture.html" class="btn btn--outline">See What We Manufacture</a>
         </div>
       </div>
     </section>
@@ -111,14 +114,14 @@
       <div class="container">
         <div class="two-col">
           <div>
-            <p class="section-eyebrow">Our Story</p>
-            <h2>San Diego roots,<br><em>global reach</em></h2>
+            <p class="section-eyebrow">About SFN_MFG</p>
+            <h2>A production process,<br><em>not a hobby shop</em></h2>
           </div>
           <div class="prose">
-            <p>We started SFN_MFG because we kept running into the same problem: getting a physical part made was either too slow, too expensive, or required minimum orders that made no sense for a one-person operation or a small team. San Diego has a thriving maker and engineering community, and we wanted to build something that served it &mdash; and everyone else who needs real parts without the runaround.</p>
-            <p>Additive manufacturing works by building parts layer by layer from a digital model. Unlike traditional subtractive methods &mdash; where material is cut away from a block &mdash; 3D printing adds only what's needed, reducing waste and enabling geometries that would be impossible or prohibitively expensive to machine. One part costs almost the same to make as ten. No dies, no molds, no setup fees.</p>
-            <p>We work primarily with FDM and resin-based processes, covering the vast majority of use cases: structural parts, enclosures, brackets, display pieces, prototypes, and more. Not sure which process is right for your project? <a href="#contact" style="text-decoration: underline;">Get in touch</a> and we'll help you figure it out.</p>
-            <p>We're a small operation, and we like it that way. Every order gets our full attention. If something's off about your file or your tolerances look tight, we'll reach out before we print.</p>
+            <p>Additive manufacturing is most effective when approached as a production process. Controlled materials, standardized production methods, documented inspection, and clear communication help ensure consistent results from quote through delivery.</p>
+            <p>Digital models become physical parts through a repeatable manufacturing process designed for prototypes, replacement parts, and low-volume production. No dies, no molds, no setup fees.</p>
+            <p>SFN_MFG operates a production-focused setup built around a controlled material system covering three performance tiers: General, Functional, and Reinforced.</p>
+            <a href="about.html" class="btn btn--outline" style="margin-top: 8px;">About SFN_MFG</a>
           </div>
         </div>
       </div>
@@ -131,6 +134,7 @@
           <p class="section-eyebrow">Instant Pricing</p>
           <h2>Get a quote in seconds</h2>
           <p>Upload your file, choose your material, and get pricing immediately &mdash; no account required.</p>
+          <p style="margin-top: 8px; color: var(--color-text-muted); font-size: 0.95rem;">Every project is reviewed before manufacturing begins. Final pricing and timeline are confirmed prior to manufacturing.</p>
         </div>
         <div class="quote-widget">
           <iframe src="https://app.autoquote3d.com/widget/u727wvwbausvleplkal7ih7n" frameborder="0" title="Get an Instant Quote" sandbox="allow-scripts allow-forms allow-same-origin">Your browser does not support this quote tool. Please <a href="contact.html">contact us directly</a> to request a quote.</iframe>
@@ -146,21 +150,21 @@
           <div class="contact-info">
             <p class="section-eyebrow">Custom Jobs</p>
             <h2>Something more<br><em>involved?</em></h2>
-            <p>Large batches, unusual materials, tight tolerances, post-processing: use the form below and we'll get back to you.</p>
+            <p>Large batches, multi-part assemblies, tight tolerances, post-processing: use the contact form and we will get back to you.</p>
 
             <p class="section-eyebrow" style="margin-top: 0;">Use this form for</p>
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem; color: var(--color-text-muted);">
-              <li><span aria-hidden="true">&#8212;&nbsp;</span> Batch orders (50+ parts)</li>
+              <li><span aria-hidden="true">&#8212;&nbsp;</span> Large batches and volume orders</li>
               <li><span aria-hidden="true">&#8212;&nbsp;</span> Multi-part assemblies</li>
-              <li><span aria-hidden="true">&#8212;&nbsp;</span> Custom material requests</li>
-              <li><span aria-hidden="true">&#8212;&nbsp;</span> Post-processing or finishing</li>
-              <li><span aria-hidden="true">&#8212;&nbsp;</span> Anything unusual or complex</li>
+              <li><span aria-hidden="true">&#8212;&nbsp;</span> Non-standard production requirements</li>
+              <li><span aria-hidden="true">&#8212;&nbsp;</span> Post-processing or finishing requirements</li>
+              <li><span aria-hidden="true">&#8212;&nbsp;</span> Any project where you would like to talk through the details first</li>
             </ul>
           </div>
 
           <div class="contact-email">
             <p class="section-eyebrow">Email us directly</p>
-            <a href="mailto:hello@sfnmfg.com" class="contact-email__link">hello@sfnmfg.com</a>
+            <a href="mailto:studio@sfnmfg.com" class="contact-email__link">studio@sfnmfg.com</a>
           </div>
 
         </div>
@@ -173,7 +177,11 @@
     <div class="container">
       <div class="footer-inner">
         <span class="footer-logo">
-          <img src="SFN_MFG_STUDIO_MARK.svg" alt="" class="footer-logo__img" width="28" height="28">
+          <img src="SFN_MFG_LOGO.svg" alt="" class="footer-logo__img" width="28" height="28">
+          <span class="footer-logo__text">
+            <span class="footer-logo__line1">Useful things.</span>
+            <span class="footer-logo__line2">Professionally printed.</span>
+          </span>
         </span>
         <p class="footer-copy">&copy; 2026 SFN_MFG. All rights reserved.</p>
       </div>
