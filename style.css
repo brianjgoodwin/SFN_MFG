@@ -308,14 +308,26 @@ p { max-width: 65ch; }
   gap: 48px;
 }
 
-.feature-item__icon {
-  font-size: 1rem;
-  margin-bottom: 16px;
-  line-height: 1;
-  color: var(--color-accent);
+.feature-item {
+  display: flex;
+  flex-direction: column;
 }
 
-.feature-item h3 { margin-bottom: 10px; }
+.feature-item__header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.feature-item__icon {
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.feature-item h3 { margin-bottom: 0; }
 
 .feature-item p {
   font-size: 0.95rem;
@@ -570,12 +582,10 @@ hr.divider {
 /* --- Quote CTA block (homepage + inner pages) --- */
 .quote-cta {
   max-width: 560px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 32px;
-  text-align: center;
 }
 
 .quote-cta__note {
